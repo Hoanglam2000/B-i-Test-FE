@@ -1,0 +1,22 @@
+function findCommonNumbers(arr1, arr2) {
+    const set1 = new Set(arr1);
+  
+    const commonNumbers = [];
+  
+    for (const num of arr2) {
+      // Check if the number exists in the set1
+      if (set1.has(num)) {
+        // If it does, add it to the commonNumbers array
+        commonNumbers.push(num);
+      }
+    }
+  
+    return commonNumbers;
+  }
+  
+  const array1 = [1, 3, 4, 2, 7, 9, 10, 6, 8];
+  const array2 = [1, 3, 9, 11, 5, 7, 13];
+  
+  const commonNumbers = findCommonNumbers(array1, array2);
+  
+  console.log("Common Numbers:", commonNumbers);
